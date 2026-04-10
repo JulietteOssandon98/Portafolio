@@ -1,0 +1,129 @@
+       :root{
+        --brand-1: #8b5e3c; /* café/bronze */
+        --accent: #f6d6c7; /* rosa nude */
+        --muted: #6b6b6b;
+      }
+
+      body{
+        font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+        background: #fff8f6; 
+        color:#2b2b2b}
+
+      /* NAV */
+      container-nav {
+        background-color: #2b2b2b;
+      }
+
+
+    .site-logo {
+        font-family: 'Playfair Display', serif; 
+        font-weight:700; 
+        letter-spacing:1px;
+    }
+
+    /* Contenedor del logo */
+    .logo-site {
+      height: 80px; /* ajusta según tu diseño */
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    /* Si el logo está en el navbar */
+    .navbar .logo-site {
+      max-height: 80px; /* altura menor en barra */
+    }
+    
+
+    /* Si quieres que responda bien en móviles */
+    @media (max-width: 576px) {
+      .logo-site {
+        max-height: 50px;
+      }
+    }
+
+    .nav-cart-btn {
+        position:relative;
+    }
+
+
+    .btn-cart-white {
+      background-color: #ffffff;
+      border: none;
+    }
+
+    .btn-cart-white svg {
+      fill: #d4af37; /* color oro */
+    }
+
+    .btn-cart-white:hover {
+      background-color: #f0f0f0;
+    }
+
+    .badge-gold {
+      background-color: #d4af37; /* oro */
+      color: #000000; /* texto negro para contraste */
+    }
+
+
+    .cart-badge {
+        position:absolute; 
+        top:-6px; 
+        right:-6px; 
+        font-size:0.7rem;
+    }
+
+    .presentacion-container {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .presentacion-img {
+      width: 100%;
+      height: auto; /* Mantiene proporción */
+      display: block;
+    }
+
+
+
+      /* Hero / productos */
+    .category-pills .nav-link {
+        border-radius:50px
+    }
+    .product-title {
+        font-family: 'Playfair Display', serif; 
+        font-size:1.6rem
+    }
+
+      /* Cards */
+    .product-card {
+        border:none; 
+        background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(246,214,199,0.4)); 
+        border-radius:14px; 
+        box-shadow:0 6px 20px rgba(139,94,60,0.08)
+    }
+
+    .product-img {
+        height:220px; 
+        object-fit:cover; 
+        border-radius:12px;
+    }
+
+      /* Footer */
+    footer {
+        background:#000000; 
+        border-top:1px solid #eee;
+    }
+    .social-icon {
+        width:36px; 
+        height:36px; 
+        display:inline-flex; 
+        align-items:center; 
+        justify-content:center; 
+        border-radius:50%; 
+        background:var(--accent)
+    }
+
+      @media(min-width:1200px){
+        .product-img{height:280px}
+      }

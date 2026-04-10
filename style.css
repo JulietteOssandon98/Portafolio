@@ -1,0 +1,243 @@
+:root {
+  --color-principal: #E8CFC3; /* Rosa nude */
+  --color-fondo: #ffffff;
+  --color-texto: #333333;     /* Gris oscuro */
+  --color-acento: #D1702D;    /* Naranja quemado (si lo deseas mantener) */
+  --color-secundario: #B78A60; /* Castaño claro */
+  --color-terciario: #F4F4F4;  /* Blanco cálido */
+  --sombra-boton: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body.modo-oscuro {
+  --color-fondo: #e0bfaf;
+  --color-texto: #333333;
+  --color-principal: #C7B0A3;
+  --sombra-boton: 0 4px 12px var(--color-secundario);
+}
+
+a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+header, footer {
+  background-color: var(--color-principal);
+  color: var(--color-texto);
+  padding: 20px 0;
+  transition: background-color 0.5s;
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+
+nav a:hover {
+  color: var(--color-secundario);
+}
+
+
+button {
+  background-color: var(--color-principal);
+  color: var(--color-texto);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: var(--sombra-boton);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(66, 66, 66, 0.2);
+  background-color: var(--color-secundario);
+}
+
+input, textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  color: #000;
+  font-size: 15px;
+  transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid var(--color-principal);
+  outline: none;
+}
+
+body.modo-oscuro input,
+body.modo-oscuro textarea {
+  background-color: var(--color-secundario);
+  color: rgb(255, 255, 255);
+  border: 1px solid #555;
+}
+
+.scroll-anim {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+
+.scroll-anim.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.exito {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.serviceicon {
+  max-width: 80px;
+  transition: transform 0.3s;
+}
+
+.serviceicon:hover {
+  transform: scale(1.1);
+}
+
+.portafolioimg {
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.portafolioimg:hover {
+  transform: scale(1.05);
+}
+
+#portafolio {
+  padding: 50px 0;
+  border-radius: 15px;
+  transition: background 0.5s;
+}
+
+.portafolio-container {
+  display: flex;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.portafolio-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.portafolio-item {
+  flex: 0 0 33%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.portafolio-item img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.portafolio-item:hover img {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .portafolio-item {
+    flex: 0 0 100%;
+  }
+}
+
+.scroll-anim {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-anim.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.servicios-row .col-md-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.servicios-row .col-md-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+body.modo-oscuro #contacto {
+  background: linear-gradient(to bottom, #e0bfaf 0%, #c09d8c 100%);
+}
+
+body.modo-oscuro #contacto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.25); /* un velo suave para dar contraste al texto */
+  z-index: 0;
+}
+
+#contacto {
+  background-image: url('assets/fondocontacto.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: var(--color-texto);
+  padding: 60px 0;
+}
+
+#contacto::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* suaviza la imagen para mejor contraste */
+  z-index: 0;
+}
+
+#contacto .container {
+  position: relative;
+  z-index: 1;
+}
